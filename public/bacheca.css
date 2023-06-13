@@ -1,0 +1,289 @@
+#i2 {
+  display: flex;
+  height: 100%;
+  background-image: url("im.jpg");
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+}
+
+#bacheca{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top:60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.element{
+    width:100%;
+    height: 40%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 2% 0 2% 0;
+    border-radius: 5px;
+}
+@media (max-width: 500px) {
+  .element{
+    width:100%;
+    height: 90%;
+    flex-direction: column;
+  }
+}
+.element img{
+    max-width: 40%;
+    height:100%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+@media (max-width: 500px) {
+  .element img{
+    max-width: 100%;
+    height:100%;
+    
+  }
+}
+
+.element .info{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: auto;
+    width: 20%;
+    padding: 5% 1%;
+    /*border: solid rgb(255, 222, 37) 5px;*/
+    background-color: white;
+    border-radius: 5px;
+}   
+.element .info span{
+    font-weight: bold;
+    padding: 8px;
+} 
+@media (max-width: 500px) {
+  .element .info{
+    width: 100% !important;
+  }
+
+}
+
+.tasti{
+    height: 50%;
+    padding: 2%;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: 1%;
+
+}
+@media (max-width: 500px) {
+  .tasti{
+    width: 100% !important;
+  }
+  .tasti img{
+    width: 20%;
+  }
+  
+}
+.like_div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.like_div span{
+  font-size: 24px;
+  margin: auto;
+}
+
+
+.tasti button{
+    width: 100%;
+    margin:4%;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing:2px;
+    color: black;
+    border: solid black;
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin-left: auto;
+    margin-right: auto ;
+    text-decoration: none;
+    transition: 1.2s;
+}
+.tasti img{
+  margin-left: auto;
+  margin-right: auto;
+}
+.tasti button:hover{
+    background-color: rgb(255, 222, 37);
+    transition: 1.2s;
+}
+
+#modal-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+  
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #modal-view img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  #modal-view.hidden {
+    display: none;
+  }
+  .hiden{
+    display: none;
+  }
+  
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  /*MODALE COMMENTO*/
+  .modal {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .modal-comment-content{
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 70%;
+    position: relative;
+    align-items: center;
+  }
+  .modal-comment-content h1{
+    text-align: center;
+  }
+  .modal-comment-content form{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    background-color: #888;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+  }
+  .modal-comment-content form input[type=text]{
+    width: 60%;
+    height: 75%;
+    font-size: 16px;
+    margin-top: auto;
+    margin-bottom:auto ;
+    border-radius: 10px;
+    border: none;
+  }
+  .modal-comment-content form input[type=submit]{
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    background-color: #888;
+    color: rgb(255, 222, 37);
+    border: solid rgb(255, 222, 37);
+    border-radius: 10px;
+    padding: auto;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  .modal-comment-content form input[type=submit]:hover{
+    color: black;
+    border: solid black;
+    transition: 0.5s;
+  }
+  .modal-comment-content form label{
+    font-size: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.view-comment{
+    width: 90%;
+    overflow: auto;
+}
+.view-comment div{
+    padding: 1%;
+    margin: 1%;
+    background-color: rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
+.comment_user{
+    color: rgb(255, 222, 37);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.info_user{
+    color: rgb(218, 188, 19);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/*MODALE DESCRIZIONE*/
+.modal-desc-content{
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-height:70%;
+    position: relative;
+    overflow: auto;
+}
+
+.modal-desc-content h1{
+    text-align: center;
+}
